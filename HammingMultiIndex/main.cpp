@@ -135,8 +135,8 @@ void TestPerformance(MultiIndex& index)
 		// Optimized.
 		vector<pair<uint, float>> optimizedResults;
 		clock_t start = clock();
-		index.DoRangeQueryBruteForce(query, RANGE, optimizedResults);
-		//index.DoRangeQueryOptimized(query, RANGE, optimizedResults);
+		//index.DoRangeQueryBruteForce(query, RANGE, optimizedResults);
+		index.DoRangeQueryOptimized(query, RANGE, optimizedResults);
 		clock_t stop = clock();
 		cout << "      Results found: " << optimizedResults.size() << endl;
 		float timeMs = 1000.0f * (static_cast<float>(stop) - start) / CLOCKS_PER_SEC;
@@ -157,7 +157,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "Done. Item size is " << ITEM_SIZE << " bytes." << endl;
 
 	// Compare brute force and optimized results on 10M.
-	//TestBruteForceVsOptimizedApproach(index);
+	TestBruteForceVsOptimizedApproach(index);
 
 	// Upload 100M random items and measure query time.
 	TestPerformance(index);
