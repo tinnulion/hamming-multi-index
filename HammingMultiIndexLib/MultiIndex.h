@@ -45,7 +45,7 @@ namespace HMI
 		 * @throw FastHammingIndexException exception if popcount command is not supported by current CPU.
 		 * @param itemBytesNumber - number of bytes in items which shall be indexed.
 		 * @param bucketPageSize - size of page inside bucket (larger page size cause less allocations but increase memory overhead and vice versa).
-		 * @param keyHashTableSize - number of items in hash table (more items mean faster lookup, but more space required and vice versa).
+		 * @param hashTableSize - number of items in hash table (more items mean faster lookup, but more space required and vice versa).
 		 * @param pageSize - number of items per page (larger page size cause less allocations but increase memory overhead and vice versa).
 		 */
 		MultiIndex(
@@ -111,7 +111,7 @@ namespace HMI
 
 		/**
 		 * This method add single item to index.
-		 * @param key - item unique identifier. Keys don`t have to count one-after-another.
+		 * @param key - item unique identifier. Keys don`t have to go one-after-another.
 		 * @param item - array bytes with data to be stored. 
 		 */
 		void AddItem(uint key, const byte *const item)

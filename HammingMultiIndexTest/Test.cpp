@@ -15,7 +15,7 @@
 #include <utility>
 #include <random>
 
-#include "MultiIndex.h"
+#include "..\HammingMultiIndexLib\MultiIndex.h"
 
 using namespace std;
 using namespace HMI;

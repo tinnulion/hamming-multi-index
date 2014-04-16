@@ -1,7 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HammingMultiIndex", "HammingMultiIndex\HammingMultiIndex.vcxproj", "{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HammingMultiIndexDLL", "HammingMultiIndexDLL\HammingMultiIndexDLL.vcxproj", "{C72588CA-A9CC-4823-BCF2-81201127DB13}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1} = {A8C6E4B9-73D9-4886-9021-742221A2CCF1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HammingMultiIndexLib", "HammingMultiIndexLib\HammingMultiIndexLib.vcxproj", "{A8C6E4B9-73D9-4886-9021-742221A2CCF1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HammingMultiIndexTest", "HammingMultiIndexTest\HammingMultiIndexTest.vcxproj", "{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1} = {A8C6E4B9-73D9-4886-9021-742221A2CCF1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingMultiIndexWrapperCSharp", "HammingMultiIndexWrapperCSharp\HammingMultiIndexWrapperCSharp.csproj", "{6601F2FF-26CF-429D-A656-E5E19CD636C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C72588CA-A9CC-4823-BCF2-81201127DB13} = {C72588CA-A9CC-4823-BCF2-81201127DB13}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +24,22 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72588CA-A9CC-4823-BCF2-81201127DB13}.Debug|x64.ActiveCfg = Debug|x64
+		{C72588CA-A9CC-4823-BCF2-81201127DB13}.Debug|x64.Build.0 = Debug|x64
+		{C72588CA-A9CC-4823-BCF2-81201127DB13}.Release|x64.ActiveCfg = Release|x64
+		{C72588CA-A9CC-4823-BCF2-81201127DB13}.Release|x64.Build.0 = Release|x64
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1}.Debug|x64.ActiveCfg = Debug|x64
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1}.Debug|x64.Build.0 = Debug|x64
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1}.Release|x64.ActiveCfg = Release|x64
+		{A8C6E4B9-73D9-4886-9021-742221A2CCF1}.Release|x64.Build.0 = Release|x64
 		{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}.Debug|x64.ActiveCfg = Debug|x64
 		{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}.Debug|x64.Build.0 = Debug|x64
 		{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}.Release|x64.ActiveCfg = Release|x64
 		{41FA03CE-7BA0-470C-AE68-8260A91BC4C0}.Release|x64.Build.0 = Release|x64
+		{6601F2FF-26CF-429D-A656-E5E19CD636C6}.Debug|x64.ActiveCfg = Debug|x64
+		{6601F2FF-26CF-429D-A656-E5E19CD636C6}.Debug|x64.Build.0 = Debug|x64
+		{6601F2FF-26CF-429D-A656-E5E19CD636C6}.Release|x64.ActiveCfg = Release|x64
+		{6601F2FF-26CF-429D-A656-E5E19CD636C6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
